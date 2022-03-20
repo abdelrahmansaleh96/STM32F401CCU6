@@ -46,9 +46,9 @@ typedef struct
 	uint32_t RCC_AHB1LPENR;
 	uint32_t RCC_AHB2LPENR;
 	uint32_t RCC_RESERV9;
-    uint32_t RCC_RESERV10;
-    uint32_t RCC_APB1LPENR;
-    uint32_t RCC_APB2LPENR;
+    	uint32_t RCC_RESERV10;
+        uint32_t RCC_APB1LPENR;
+        uint32_t RCC_APB2LPENR;
 	uint32_t RCC_RESERV11;
 	uint32_t RCC_RESERV12;
 	uint32_t RCC_BDCR;
@@ -56,8 +56,8 @@ typedef struct
 	uint32_t RCC_RESERV13;
 	uint32_t RCC_RESERV14;
 	uint32_t RCC_SSCGR;
-    uint32_t RCC_PLLI2SCFGR;
-    uint32_t RCC_RESERV15;
+   	 uint32_t RCC_PLLI2SCFGR;
+    	uint32_t RCC_RESERV15;
 	uint32_t RCC_DCKCFGR;
 }RCCReg_t;
 
@@ -72,19 +72,19 @@ typedef struct
 */
 
 /*--RCC base address---*/
-#define RCC_BASE		                ((volatile RCCReg_t *) 0x40023800u)
+#define RCC_BASE		               		((volatile RCCReg_t *) 0x40023800u)
 
 /*Function Masks:    RCC_SelectSysClk*/
-#define RCC_CFGR_SW_CLR_M     			0x00000003u
+#define RCC_CFGR_SW_CLR_M     				0x00000003u
 #define RCC_CFGR_SWS_GET_M				0x0000000Cu
 
 /*Function Masks:    RCC_ControlHSIOn*/
-#define RCC_CR_PLLON_SET_M   	 		0x01000000u
+#define RCC_CR_PLLON_SET_M   	 			0x01000000u
 #define RCC_CR_PLLRDY_SET_M				0x02000000u
 
-/*Function Masks:    RCC_ControlHSEOn*/
-#define RCC_CR_HSION_SET_M   			0x00000001u
-#define RCC_CR_HSIRDY_GET_M   			0x00000002u
+/*Function Masks:    RCC_ControlHSEOn*/		
+#define RCC_CR_HSION_SET_M   				0x00000001u
+#define RCC_CR_HSIRDY_GET_M   				0x00000002u
 
 /*Function Masks:    RCC_ControlPLLOn*/
 #define RCC_CR_HSEON_SET_M				0x00010000u
@@ -94,7 +94,7 @@ typedef struct
 #define RCC_PLLCFGR_CLR_M				0xF0FC8000u
 
 
-#define RCC_PLLCFGR_SCR_GET_M			0x00400000u
+#define RCC_PLLCFGR_SCR_GET_M				0x00400000u
 
 
 
@@ -324,10 +324,10 @@ RCC_tenumErrorStatus RCC_ControPLLOff(void)
 ******************************************************************************/
 
 RCC_tenumErrorStatus RCC_PLLConfiguration(	uint8_t  	Copy_PLLM,
-											uint16_t 	Copy_PLLN,
-											uint8_t  	Copy_PLLP,
-											uint8_t  	Copy_PLLQ,
-											uint8_t  	Copy_PLLSRC)
+						uint16_t 	Copy_PLLN,
+						uint8_t  	Copy_PLLP,
+						uint8_t  	Copy_PLLQ,
+						uint8_t  	Copy_PLLSRC)
 {
 	/*Create Return Error status initialize it with OK status  */
 	RCC_tenumErrorStatus Loc_enuErrorStatus = RCC_enumOK;
