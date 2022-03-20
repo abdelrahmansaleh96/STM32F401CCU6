@@ -56,7 +56,7 @@ typedef struct
 	uint32_t RCC_RESERV13;
 	uint32_t RCC_RESERV14;
 	uint32_t RCC_SSCGR;
-   	 uint32_t RCC_PLLI2SCFGR;
+   	uint32_t RCC_PLLI2SCFGR;
     	uint32_t RCC_RESERV15;
 	uint32_t RCC_DCKCFGR;
 }RCCReg_t;
